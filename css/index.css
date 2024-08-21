@@ -1,0 +1,55 @@
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    height: 100vh; /* 讓body佔滿整個視窗高度 */
+    margin: 0; /* 移除預設的外邊距 */
+}
+
+img {
+    width: 500px;
+}
+
+main {
+    background-image: url("../image/背景.png");
+    background-size: 60%;
+    padding: 5px 20px;
+    margin: 10px auto;
+    border: 5px solid white;
+    width: 500px;
+}
+
+h2 {
+    font-size: 40px;
+    padding: 0px;
+    margin: 10px;
+}
+
+textarea {
+    border: none; /* 移除邊框 */
+    outline: none; /* 移除聚焦時的外框 */
+    resize: none; /* 禁止拉伸 */
+    background: none; /* 移除背景 */
+    padding: 0; /* 移除內邊距 */
+    margin: 0; /* 移除外邊距 */
+    font: inherit; /* 繼承父元素的字體樣式 */
+    border-radius: 20px;
+    background-color: white;
+    padding: 10px;
+    width: 400px;
+    height: 200px;
+}
+
+button {
+    border-radius: 20px;
+    padding: 5px 30px;
+    font-size: 20px;
+    background-color: red;
+    color: white;
+    border: 1px solid white;
+    font-weight: 1000;
+    
+}
