@@ -28,15 +28,6 @@ h2 {
     margin: 10px;
 }
 
-.input{
-    margin: 5px;
-    border: none; /* 移除邊框 */
-    outline: none; /* 移除聚焦時的外框 */
-    font-size: 25px;
-    text-align: center;
-    border-radius: 10px;
-}   
-
 textarea {
     border: none; /* 移除邊框 */
     outline: none; /* 移除聚焦時的外框 */
@@ -52,9 +43,7 @@ textarea {
     height: 200px;
 }
 
-
-
-.submit {
+input {
     border-radius: 20px;
     padding: 5px 30px;
     font-size: 20px;

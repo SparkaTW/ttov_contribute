@@ -4,6 +4,29 @@
     <link rel="icon" href="image/無背景標誌.png">
     <link href="css/normalize.css" rel = "stylesheet" type="text/css">
     <link href="css/index.css" rel = "stylesheet" type="text/css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("form").submit(function(event){
+                event.preventDefault();
+                $.ajax({
+                    url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfSYixP4OQoiW9VCv4xvLFHS_Ntv8lyPGNhpLGAHcyFhPGTJA/formResponse",
+                    method: "POST",
+                    data: {
+                        "entry.1587345086": $('#title').val(),
+                        "entry.2080662003": $('#content').val()
+                    },
+                    success: function(){
+                        window.location.replace("thank.html");
+                    },
+                    error: function(xhr, status, error){
+                        window.location.replace("thank.html");
+                    }
+                });
+            });
+        });
+        </script>
 </head>
 <body>
     <div class="center">
@@ -11,14 +34,17 @@
             <img src="image/標誌.png">
         </header>
         <main>
-            <h2>新增貼文</h2>
-            <form>
-                <textarea name="text"></textarea>
+            <h2>投稿文章</h2>
+            <form id="google-form">
+                <label>文章標題</label><br>
+                <input class="input" type="text" id="title" required>
                 <br>
-                <button>我有話想說</button>
+                <label>內文</label>
+                <br>
+                <textarea id="content" required></textarea>
+                <br>
+                <input class="submit" type="submit" value="我有話想說">
             </form>
         </main>
     </div>
-
-    
 </body>
